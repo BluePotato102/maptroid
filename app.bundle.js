@@ -2139,25 +2139,7 @@ class SplashScene extends Phaser.Scene {
         }, null, this);
     }
     checkDomain() {
-        let domain = domainName_1.getDomainName();
-        let split = domain.split(".");
-        let com = "";
-        let domainName = "";
-        if (split.length >= 2 && split[split.length - 1] !== undefined && split[split.length - 2] !== undefined) {
-            com = split[split.length - 1].toLowerCase();
-            domainName = split[split.length - 2].toLowerCase();
-        }
-        let flag = false;
-        if (com !== undefined && domainName !== undefined) {
-            flag = com === "com";
-            flag = com && (domainName === "coolmath-games" || domainName === "coolmathgames");
-        }
-        if (flag) {
-            this.scene.start('Load');
-        }
-        else {
-            this.scene.start('BadDomain');
-        }
+      this.scene.start('Load');
     }
 }
 exports.SplashScene = SplashScene;
