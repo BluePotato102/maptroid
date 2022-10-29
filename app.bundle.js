@@ -2126,7 +2126,6 @@ class SplashScene extends Phaser.Scene {
     }
     preload() {
         const basepath = `assets`;
-        this.load.image('splashscreen', `${basepath}/CoolmathGames-800x600.png`);
     }
     create() {
         this.add.image(400, 300, "splashscreen");
