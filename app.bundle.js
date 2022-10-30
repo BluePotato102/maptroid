@@ -2127,7 +2127,7 @@ class SplashScene extends Phaser.Scene {
     preload() {
         const basepath = `assets`;
     }
-    checkDomain() {
+    create() {
       this.scene.start('Load');
     }
 }
