@@ -2127,16 +2127,6 @@ class SplashScene extends Phaser.Scene {
     preload() {
         const basepath = `assets`;
     }
-    create() {
-        this.add.image(400, 300, "splashscreen");
-        this.cameras.main.fadeIn(1500);
-        this.time.delayedCall(2500, () => {
-            this.cameras.main.fadeOut(1500);
-        }, null, this);
-        this.time.delayedCall(4100, () => {
-            this.checkDomain();
-        }, null, this);
-    }
     checkDomain() {
       this.scene.start('Load');
     }
